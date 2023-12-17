@@ -5,33 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
+  <main>
+    <div class="calculator-container">
+      <div class="entries-container">
+        <div class="mdy-entries">
+          <div class="day-entry">
+            <div class="entry-title" for="day entry">Day</div>
+            <input id="day-input" class="entry-box" name="day entry" pattern="[0-9]" maxlength="2"placeholder="DD" required></input>
+            <div class="error-message" id="day-error"></div>
+          </div>
+          <div class="month-entry">
+            <div class="entry-title" for="month entry">Month</div>
+            <input id="month-input" class="entry-box" name="month entry" pattern="[0-9]" maxlength="2" placeholder="MM" required></input>
+            <div class="error-message" id="month-error"></div>
+          </div>
+          <div class="year-entry">
+            <div class="entry-title" for="year entry">Year</div>
+            <input id="year-input" class="entry-box" name="year entry" pattern="[0-9]" maxlength="4" placeholder="YYYY" required></input>
+            <div class="error-message" id="year-error"></div>
+          </div>
+        </div>
+      </div>
+      <div class="button-row">
+        <div class="button">
+          <img src="assets/images/icon-arrow.svg" tabindex="0" alt="submit button">
+        </div>
+      </div>
+      <hr>
+      <div class="calculator-results">
+        <div class="result-line" id="result-years"><p class="calculator-outputs" id="calculator-result-year">--</p> years</div>
+        <div class="result-line" id="result-months"><p class="calculator-outputs" id="calculator-result-month">--</p> months</div>
+        <div class="result-line" id="result-days"><p class="calculator-outputs" id="calculator-result-day">--</p> days</div>
+      </div>
+    </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/Clonephaze">Clonephaze</a>.
+    </div>
+  </footer>
+  <script src="AgeCalculator.js"></script>
 </html>

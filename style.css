@@ -1,0 +1,256 @@
+/****** Common CSS ******/
+:root {
+    --Purple: hsl(259, 100%, 65%);
+    --LightRed: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey: hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:focus {
+    outline: none;
+}
+
+body {
+    background-color: var(--LightGrey);
+}
+
+main {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container {
+    background-color: var(--OffWhite);
+    min-height: 600px;
+    max-width: 800px;
+    border-radius: 16px 16px 180px 16px;
+}
+
+.entries-container {
+    max-width: 75%;
+}
+
+.mdy-entries {
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.month-entry,
+.day-entry,
+.year-entry {
+    width: 30%;
+}
+
+.entry-title {
+    padding-left: 0.2em;
+    color: var(--SmokeyGrey);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.entry-box {
+    cursor: text;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--OffBlack);
+    background-color: var(--White);
+    border-radius: 8px;
+    border: solid 2px var(--LightGrey);
+    text-align: left;
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+.error-message {
+    padding-left: 0.2em;
+    color: var(--LightRed);
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.button-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -46px;
+    margin-right: 37px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    background-color: var(--Purple);
+    border-radius: 360px;
+    cursor: pointer;
+}
+
+.button img {
+    width: 50%;
+}
+
+hr {
+    border: solid 1px var(--LightGrey);
+    width: 90%;
+    margin-left: 40px;
+}
+
+.calculator-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.result-line {
+    display: flex;
+    align-items: center;
+    font-size: 96px;
+    font-weight: 800;
+    font-style: italic;
+    margin-left: 40px;
+}
+
+.calculator-outputs {
+    font-size: 96px;
+    font-weight: bold;
+    color: var(--Purple);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/****** Mobile CSS ******/
+@media (max-width: 375px) {
+    .entries-container {
+        max-width: 100%;
+    }
+
+    .mdy-entries {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .month-entry,
+    .day-entry,
+    .year-entry {
+        width: 30%;
+    }
+
+    .entry-box {
+        font-size: 20px;
+    }
+
+    .button-row {
+        justify-content: center;
+        right: 0;
+        margin-right: 0;
+
+    }
+
+    hr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .calculator-container {
+        max-width: 90vw;
+        border-radius: 16px 16px 120px 16px;
+    }
+
+    .result-line,
+    .calculator-outputs {
+        font-size: 50px;
+    }
+
+    .calculator-results {
+        margin-top: 60px;
+    }
+}
+
+
+/****** Desktop CSS ******/
+@media (min-width: 1440px) {
+    .button {
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .button:hover {
+        background-color: hsl(259, 100%, 62%);
+    }
+}
+
+/****** Fonts ******/
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 800;
+}
